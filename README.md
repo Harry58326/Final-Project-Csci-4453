@@ -18,6 +18,7 @@ Overall, this platform will provide an efficient way for users to manage and ana
 
 
 Different Roles:
+
 Chenfei Peng:
 Create the initial database schema for the "Common_player_info" and "Player_Stat" tables in mySQL.
 Develop the user interface for the platform, including the ability to add a new player and filter player information by various categories.
