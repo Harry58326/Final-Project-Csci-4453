@@ -4,17 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NBAPlayerComponent } from './nbaplayer/nbaplayer.component';
-import { NBAComponent } from './nba/nba.component';
+import { HttpClientModule} from  '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NBAPlayerComponent,
-    NBAComponent
+    NBAPlayerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
