@@ -7,13 +7,24 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./nbaplayer.component.css']
 })
 export class NBAPlayerComponent {
-  constructor(public http: HttpClient){}
-getData() {
-alert("get data")
-let api = "";
-this.http.get(api).subscribe((response)=> {
-  console.log(response);
-})
-}
+    data: any[] = [];
 
-}
+    constructor(private http: HttpClient) {}
+
+    ngOnInit() {
+      this.http.get<any[]>('http://localhost:3000/data').subscribe(
+        (response) => {
+          console.log(response);
+          this.data = response;
+        },
+        (error) => console.error(error)
+      );
+    }
+  }
+
+
+
+
+
+
+
