@@ -10,6 +10,10 @@ export class NBAPlayerComponent {
   constructor(public http: HttpClient){}
 getData() {
 alert("get data")
+let api = "";
+this.http.get(api).subscribe((response)=> {
+  console.log(response);
+})
 }
 
 }
