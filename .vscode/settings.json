@@ -12,6 +12,19 @@
             "database": "Harry",
             "username": "HLyu",
             "password": "20001019"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "666",
+            "database": "project",
+            "username": "CPeng",
+            "password": "lyupengyang"
         }
     ]
 }
