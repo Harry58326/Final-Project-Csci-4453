@@ -1,0 +1,85 @@
+
+.my-form {
+  width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.my-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.my-form legend {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #151616;
+}
+
+.my-form label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.my-form input[type="text"],
+.my-form input[type="number"],
+.my-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s;
+}
+
+.my-form input[type="text"]:focus,
+.my-form input[type="number"]:focus,
+.my-form select:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.my-form button[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: 20px auto 0;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.my-form button[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+.my-form select {
+  background-color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5" width="16" height="10"><path fill="%23222" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 10px;
+}
+
+.my-form select:focus {
+  background-color: #f2f2f2;
+}

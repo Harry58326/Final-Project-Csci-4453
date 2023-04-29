@@ -1,0 +1,65 @@
+<form class="my-form" (ngSubmit)="submitForm()">
+  <fieldset>
+    <legend>Player Information</legend>
+
+    <div class="form-group">
+      <label for="player_name">Player Name</label>
+      <input type="text" [(ngModel)]="request.player_name" name="player_name" id="player_name" placeholder="Enter player name">
+    </div>
+
+    <div class="form-group">
+      <label for="jersey_number">Jersey Number</label>
+      <input type="number" [(ngModel)]="request.jersey_number" name="jersey_number" id="jersey_number" placeholder="Enter jersey number">
+    </div>
+
+    <div class="form-group">
+      <label for="position">Position</label>
+      <input type="text" [(ngModel)]="request.position" name="position" id="position" placeholder="Enter player position">
+    </div>
+
+    <div class="form-group">
+      <label for="height">Height</label>
+      <input type="text" [(ngModel)]="request.height" name="height" id="height" placeholder="Enter height in centimeters">
+    </div>
+
+    <div class="form-group">
+      <label for="weight">Weight</label>
+      <input type="number" [(ngModel)]="request.weight" name="weight" id="weight" placeholder="Enter weight in kilograms">
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country</label>
+      <input type="text" [(ngModel)]="request.country" name="country" id="country" placeholder="Enter country name">
+    </div>
+
+    <div class="form-group">
+      <label for="school_name">School Name</label>
+      <input type="text" [(ngModel)]="request.school_name" name="school_name" id="school_name" placeholder="Enter school name">
+    </div>
+
+    <div class="form-group">
+      <label for="school_type">School Type</label>
+      <select [(ngModel)]="request.school_type" name="school_type" id="school_type">
+        <option value="High School">High School</option>
+        <option value="University">University</option>
+        <option value="Community College">Community College</option>
+        <option value="Foreign School">Foreign School</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select [(ngModel)]="request.status" name="status" id="status">
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="teams">Teams</label>
+      <input type="text" [(ngModel)]="request.teams" name="teams" id="teams" placeholder="Enter teams">
+    </div>
+
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>

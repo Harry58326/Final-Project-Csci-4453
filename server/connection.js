@@ -7,9 +7,9 @@ const app = express();
 
 const connection = mysql.createConnection({
   host: '127.0.0.1', //localhost is not working here so I use 127.0.0.1 to replace localhost
-  user: 'root',
+  user: 'Harry',
   password: '20001019',
-  database: 'Harry'
+  database: 'Final_Project'
 });
 
 connection.connect((err)=>{
@@ -24,7 +24,7 @@ connection.connect((err)=>{
 app.use(cors());
 
 app.get('/data', (req, res) => {
-  const sqlQuery = "SELECT * FROM students";
+  const sqlQuery = "SELECT * FROM NBA_Players";
 
   connection.query(sqlQuery, (err, results, fields) => {
     if (err) {
@@ -50,6 +50,6 @@ app.post('/post',(req, res)=>{
   });
 })
 
-app.listen(3001, () => {
-  console.log('Server listening on port 3001');
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
 });
