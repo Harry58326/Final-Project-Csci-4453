@@ -12,11 +12,11 @@
 
 <button (click)="increaseOrder()">Click here</button>
 
-<<div [ngSwitch]="order">
+<!-- <<div [ngSwitch]="order">
   <div *ngSwitchCase="1">order is not sold</div>
   <div *ngSwitchCase="2">order is sold</div>
   <div *ngSwitchDefault>Hello World</div>
-</div>
+</div> -->
 
 <div>
   <input type="text" [(ngModel)]="order">
@@ -27,6 +27,4 @@
 </p>
 
 
-<app-activeplayer  [order]="order">
-  success
-</app-activeplayer>
+
