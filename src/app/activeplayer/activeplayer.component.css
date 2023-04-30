@@ -60,3 +60,58 @@ h1 {
 .school-list li:last-child {
   border-bottom: none;
 }
+/* activeplayer.component.css */
+.container {
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #f5f5f5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.mat-card-header {
+  padding: 10px;
+}
+
+.mat-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.mat-card-subtitle {
+  font-size: 1em;
+}
+
+.mat-card-image {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-content-column {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.card-content-column p {
+  margin: 0;
+}
+
+

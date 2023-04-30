@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Request } from '../request/request';
 import { filter } from 'rxjs';
 
+
 @Component({
   selector: 'app-activeplayer',
   templateUrl: './activeplayer.component.html',
@@ -23,8 +24,8 @@ export class ActiveplayerComponent implements OnInit{
   ngOnInit(): void {
       let api = 'http://localhost:3000/data'
       this.http.get<Request[]>(api).subscribe((response) => {
-        console.log(response);
         this.request = response;
+        console.log(this.request);
       });
     }
 

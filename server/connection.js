@@ -22,6 +22,8 @@ connection.connect((err)=>{
 
 // Enable CORS
 app.use(cors());
+app.use(express.json());
+
 
 app.get('/data', (req, res) => {
   const sqlQuery = "SELECT * FROM NBA_Players WHERE status = 'Active'";
@@ -36,19 +38,44 @@ app.get('/data', (req, res) => {
   });
 });
 
-app.post('/post',(req, res)=>{
+app.get('/dataInactive', (req, res) => {
+  const sqlQuery = "SELECT * FROM NBA_Players WHERE status = 'Inactive'";
+
+  connection.query(sqlQuery, (err, results, fields) => {
+    if (err) {
+      console.error('Error querying database: ', err);
+      res.sendStatus(500);
+      return;
+    }
+    res.json(results);
+  });
+});
+
+app.post('/post', (req, res) => {
   const data = req.body;
-  const sqlQuery = "INSERT INTO NBA_Players(name, age) VALUES ('Harry', '22')"
-  const values = [data.name, data.age];
+  const sqlQuery = "INSERT INTO NBA_Players(player_name, jersey_number, position, height, weight, country, school_name, school_type, status, teams) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  const values = [
+    data.player_name,
+    data.jersey_number,
+    data.position,
+    data.height,
+    data.weight,
+    data.country,
+    data.school_name,
+    data.school_type,
+    data.status,
+    data.teams,
+  ];
   connection.query(sqlQuery, values, (err, results, fields) => {
     if (err) {
       console.error('Error inserting data into database: ', err);
       res.sendStatus(500);
       return;
     }
-    res.json({"success": true});
+    res.json({ "success": true });
   });
-})
+});
+
 
 app.listen(3000, () => {
   console.log('Server listening on port 3000');

@@ -1,3 +1,39 @@
+<div class="container-fluid">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col mb-4" *ngFor="let player of request">
+      <mat-card class="card h-100">
+        <mat-card-header>
+          <mat-card-title>{{ player.player_name }}</mat-card-title>
+          <mat-card-subtitle>{{ player.position }}</mat-card-subtitle>
+        </mat-card-header>
+        <div class="card-content">
+          <div class="card-content-row">
+            <div class="card-content-column">
+              <p><strong>Height:</strong> {{ player.height }}</p>
+              <p><strong>Weight:</strong> {{ player.weight }}</p>
+              <p><strong>Country:</strong> {{ player.country }}</p>
+              <p><strong>School Name:</strong> {{ player.school_name }}</p>
+              <p><strong>School Type:</strong> {{ player.school_type }}</p>
+            </div>
+            <div class="card-content-column">
+              <p><strong>Jersey Number:</strong> {{ player.jersey_number }}</p>
+              <p><strong>Teams:</strong> {{ player.teams }}</p>
+              <p><strong>Status:</strong> {{ player.status }}</p>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
 <div class="filter-container">
   <h1>Active Player</h1>
   <div class="filter-input">
