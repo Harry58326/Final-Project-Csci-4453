@@ -1,2 +1,13 @@
-<p>activeplayer works!</p>
-<h1>{{this.order}}</h1>
+<div class="filter-container">
+  <h1>Active Player</h1>
+  <div class="filter-input">
+    <input type="text" [(ngModel)]="filtervalue" placeholder="Filter by school type" />
+    <button (click)="filterRequest(filtervalue)">Filter</button>
+  </div>
+  <ul class="school-list">
+    <li *ngFor="let item of filteredRequest">
+      {{item.school_type}}
+    </li>
+  </ul>
+</div>
+

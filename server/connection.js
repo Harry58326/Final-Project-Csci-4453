@@ -24,7 +24,7 @@ connection.connect((err)=>{
 app.use(cors());
 
 app.get('/data', (req, res) => {
-  const sqlQuery = "SELECT * FROM NBA_Players";
+  const sqlQuery = "SELECT * FROM NBA_Players WHERE status = 'Active'";
 
   connection.query(sqlQuery, (err, results, fields) => {
     if (err) {
@@ -38,7 +38,7 @@ app.get('/data', (req, res) => {
 
 app.post('/post',(req, res)=>{
   const data = req.body;
-  const sqlQuery = "INSERT INTO Harry.students (name, age) VALUES ('Harry', '22')"
+  const sqlQuery = "INSERT INTO NBA_Players(name, age) VALUES ('Harry', '22')"
   const values = [data.name, data.age];
   connection.query(sqlQuery, values, (err, results, fields) => {
     if (err) {
