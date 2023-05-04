@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { InactiveplayerComponent } from './inactiveplayer/inactiveplayer.component';
 import { ActiveplayerComponent } from './activeplayer/activeplayer.component';
 import { NewrequestComponent } from './newrequest/newrequest.component';
-
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -20,13 +20,14 @@ import { NewrequestComponent } from './newrequest/newrequest.component';
     HomeComponent,
     InactiveplayerComponent,
     ActiveplayerComponent,
-    NewrequestComponent
+    NewrequestComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

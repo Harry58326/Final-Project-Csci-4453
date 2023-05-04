@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Request } from '../request/request';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-newrequest',
@@ -7,9 +8,7 @@ import { Request } from '../request/request';
   styleUrls: ['./newrequest.component.css']
 })
 export class NewrequestComponent {
-submitForm() {
-throw new Error('Method not implemented.');
-}
+constructor(private http: HttpClient){}
   request: Request = {
     height: '',
     weight: 0,
@@ -22,5 +21,18 @@ throw new Error('Method not implemented.');
     status: 'Active',
     teams: ''
   };
+
+  submitForm() {
+    this.http
+      .post('http://localhost:3000/post', this.request)
+      .subscribe(
+        (response) => {
+          console.log('Data sent successfully:', response);
+        },
+        (error) => {
+          console.error('Error sending data:', error);
+        }
+      );
+  }
 
 }

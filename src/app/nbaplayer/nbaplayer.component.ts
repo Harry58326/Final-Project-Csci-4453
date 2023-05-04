@@ -8,25 +8,8 @@ import { Request } from '../request/request';
   styleUrls: ['./nbaplayer.component.css']
 })
 export class NBAPlayerComponent {
+  public currentItem: string = 'Data from parent component';
     data: any[] = [];
-    public age: number = 3;
-    public arr: any[]=[{
-      name: 'Harry',
-      email: 'qq.com'},
-      {
-        name: "Tom",
-        email: "gmail.com"
-      },
-      {
-        name: "Jack",
-        email: "126.com"
-      }
-    ]
-    order: number = 1;
-
-    increaseOrder(){
-      this.order = this.order + 1;
-    }
 
 
     constructor(private http: HttpClient) {}
