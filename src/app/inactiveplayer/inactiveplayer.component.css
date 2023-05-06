@@ -1,0 +1,179 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.filter-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+.filter-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.filter-input input {
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #999;
+  border-radius: 3px;
+  margin-right: 1em;
+}
+
+.filter-input button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-input button:hover {
+  background-color: #0056b3;
+}
+
+.school-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.school-list li {
+  padding: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+
+.school-list li:last-child {
+  border-bottom: none;
+}
+/* activeplayer.component.css */
+.container {
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #f5f5f5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.mat-card-header {
+  padding: 10px;
+}
+
+.mat-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.mat-card-subtitle {
+  font-size: 1em;
+}
+
+.mat-card-image {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-content-column {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.card-content-column p {
+  margin: 0;
+}
+
+/* Add this to activeplayer.component.css */
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.search-container label,
+.search-container input,
+.search-container select,
+.search-container button {
+  margin-bottom: 0.5rem;
+}
+
+.search-container input,
+.search-container select {
+  padding: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-container button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0069d9;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content-column {
+  flex: 1;
+}
+
+

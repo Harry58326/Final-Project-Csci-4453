@@ -1,6 +1,44 @@
+
+<div class="search-container">
+  <div>
+    <label for="playerName">Player Name:</label>
+    <input type="text" id="playerName" [(ngModel)]="searchPlayerName" placeholder="Enter player name" />
+    <button (click)="filterByPlayerName(searchPlayerName)">Search</button>
+  </div>
+
+  <div>
+    <label for="teamName">Team Name:</label>
+    <input type="text" id="teamName" [(ngModel)]="searchTeamName" placeholder="Enter team name" />
+    <button (click)="filterByTeamName(searchTeamName)">Search</button>
+  </div>
+
+  <div>
+    <label for="jerseyNumber">Jersey Number:</label>
+    <input type="text" id="jerseyNumber" [(ngModel)]="searchJerseyNumber" placeholder="Enter jersey number" />
+    <button (click)="filterByJerseyNumber(searchJerseyNumber)">Search</button>
+  </div>
+
+  <div>
+    <label for="schoolType">School Type:</label>
+    <select id="schoolType" [(ngModel)]="searchSchoolType" (change)="filterBySchoolType(searchSchoolType)">
+      <option value="" disabled>Select a school type</option>
+      <option *ngFor="let type of schoolTypes" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="position">Position:</label>
+    <select id="position" [(ngModel)]="searchPosition" (change)="filterByPosition(searchPosition)">
+      <option value="" disabled>Select a position</option>
+      <option *ngFor="let pos of positions" [value]="pos">{{ pos }}</option>
+    </select>
+  </div>
+</div>
+
+
 <div class="container-fluid">
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <div class="col mb-4" *ngFor="let player of request">
+    <div class="col mb-4" *ngFor="let player of filteredRequest">
       <mat-card class="card h-100">
         <mat-card-header>
           <mat-card-title>{{ player.player_name }}</mat-card-title>
@@ -33,17 +71,4 @@
 
 
 
-
-<div class="filter-container">
-  <h1>Active Player</h1>
-  <div class="filter-input">
-    <input type="text" [(ngModel)]="filtervalue" placeholder="Filter by school type" />
-    <button (click)="filterRequest(filtervalue)">Filter</button>
-  </div>
-  <ul class="school-list">
-    <li *ngFor="let item of filteredRequest">
-      {{item.school_type}}
-    </li>
-  </ul>
-</div>
 
