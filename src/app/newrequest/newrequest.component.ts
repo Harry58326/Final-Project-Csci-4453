@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Request } from '../request/request';
 import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-newrequest',
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./newrequest.component.css']
 })
 export class NewrequestComponent {
-constructor(private http: HttpClient){}
+constructor(private http: HttpClient, private snack: MatSnackBar){}
   request: Request = {
     height: '',
     weight: 0,
@@ -27,10 +28,10 @@ constructor(private http: HttpClient){}
       .post('http://localhost:3000/post', this.request)
       .subscribe(
         (response) => {
-          console.log('Data sent successfully:', response);
+          this.snack.open('You have added a new NBA player successfully')
         },
         (error) => {
-          console.error('Error sending data:', error);
+          this.snack.open('Error in sending data')
         }
       );
   }
