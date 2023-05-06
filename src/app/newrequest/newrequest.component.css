@@ -83,3 +83,7 @@
 .my-form select:focus {
   background-color: #f2f2f2;
 }
+
+.equal_width{
+  width: 100%;
+}

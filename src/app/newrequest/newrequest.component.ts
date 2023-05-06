@@ -23,15 +23,20 @@ constructor(private http: HttpClient, private snack: MatSnackBar){}
     teams: ''
   };
 
+
   submitForm() {
     this.http
       .post('http://localhost:3000/post', this.request)
       .subscribe(
         (response) => {
-          this.snack.open('You have added a new NBA player successfully')
+          this.snack.open('You have added a new NBA player successfully', 'Close',{
+            duration:2000
+          });
         },
         (error) => {
-          this.snack.open('Error in sending data')
+          this.snack.open('Error in sending data','Close',{
+            duration:2000
+          });
         }
       );
   }

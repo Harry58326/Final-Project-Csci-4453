@@ -9,15 +9,15 @@
 
     <div class="form-group">
       <label for="jersey_number">Jersey Number</label>
-      <input type="number" [(ngModel)]="request.jersey_number" name="jersey_number" id="jersey_number" placeholder="Enter jersey number">
+      <input type="number" [(ngModel)]="request.jersey_number" name="jersey_number" id="jersey_number" placeholder="Enter jersey number" class="equal_width">
     </div>
 
     <div class="form-group">
       <label for="Position">Position</label>
-      <select [(ngModel)]="request.position" name="position" id="position">
+      <select [(ngModel)]="request.position" name="position" id="position" class="equal_width">
         <option value="PG">PG</option>
         <option value="SG">SG</option>
-        <option value="SF">SF</option>
+        <option value="SF">SF</option>   
         <option value="PF">PF</option>
         <option value="C">C</option>
       </select>

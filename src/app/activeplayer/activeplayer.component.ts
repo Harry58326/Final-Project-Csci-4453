@@ -9,27 +9,47 @@ import { filter } from 'rxjs';
   templateUrl: './activeplayer.component.html',
   styleUrls: ['./activeplayer.component.css']
 })
-export class ActiveplayerComponent implements OnInit{
-  public request: Request[]=[];
-  public filteredRequest: Request[]=[];
-  public filtervalue: string='';
-  constructor(public http: HttpClient){}
+export class ActiveplayerComponent implements OnInit {
+  public request: Request[] = [];
+  public filteredRequest: Request[] = [];
+  public searchPlayerName: string = '';
+  public searchTeamName: string = '';
+  public searchJerseyNumber: string = '';
+  public searchSchoolType: string = '';
+  public searchPosition: string = '';
+  public schoolTypes: string[] = ['High School', 'University', 'Community College', 'Foreign School'];
+  public positions: string[] = ['PG', 'SG', 'SF', 'PF', 'C'];
 
-  filterRequest(value: string) {
-    this.filteredRequest = this.request.filter(item => {
-      return item.school_type.toLowerCase().includes(value.toLowerCase());
-    });
+  constructor(private http: HttpClient) { }
+
+
+
+  filterByPlayerName(player_name: string): void {
+    this.filteredRequest = this.request.filter((req) => req.player_name.toLowerCase().includes(player_name.toLowerCase()));
+  }
+
+  filterByTeamName(team_name: string): void {
+    this.filteredRequest = this.request.filter((req) => req.teams.toLowerCase().includes(team_name.toLowerCase()));
+  }
+
+  filterByJerseyNumber(jersey_number: string): void {
+    this.filteredRequest = this.request.filter((req) => req.jersey_number === parseInt(jersey_number));
+  }
+
+  filterBySchoolType(school_type: string): void {
+    this.filteredRequest = this.request.filter((req) => req.school_type === school_type);
+  }
+
+  filterByPosition(position: string): void {
+    this.filteredRequest = this.request.filter((req) => req.position === position);
   }
 
   ngOnInit(): void {
-      let api = 'http://localhost:3000/data'
-      this.http.get<Request[]>(api).subscribe((response) => {
-        this.request = response;
-        console.log(this.request);
-      });
-    }
-
+    let api = 'http://localhost:3000/data'
+    this.http.get<Request[]>(api).subscribe((response) => {
+      this.request = response;
+      this.filteredRequest = response;
+      console.log(this.request);
+    });
   }
-
-
-
+}

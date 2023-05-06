@@ -1,17 +1,72 @@
-<p>inactiveplayer works!</p>
 
-<p>
-  Today's item: {{item}}
-</p>
+<div class="search-container">
+  <div>
+    <label for="playerName">Player Name:</label>
+    <input type="text" id="playerName" [(ngModel)]="searchPlayerName" placeholder="Enter player name" />
+    <button (click)="filterByPlayerName(searchPlayerName)">Search</button>
+  </div>
+
+  <div>
+    <label for="teamName">Team Name:</label>
+    <input type="text" id="teamName" [(ngModel)]="searchTeamName" placeholder="Enter team name" />
+    <button (click)="filterByTeamName(searchTeamName)">Search</button>
+  </div>
+
+  <div>
+    <label for="jerseyNumber">Jersey Number:</label>
+    <input type="text" id="jerseyNumber" [(ngModel)]="searchJerseyNumber" placeholder="Enter jersey number" />
+    <button (click)="filterByJerseyNumber(searchJerseyNumber)">Search</button>
+  </div>
+
+  <div>
+    <label for="schoolType">School Type:</label>
+    <select id="schoolType" [(ngModel)]="searchSchoolType" (change)="filterBySchoolType(searchSchoolType)">
+      <option value="" disabled>Select a school type</option>
+      <option *ngFor="let type of schoolTypes" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="position">Position:</label>
+    <select id="position" [(ngModel)]="searchPosition" (change)="filterByPosition(searchPosition)">
+      <option value="" disabled>Select a position</option>
+      <option *ngFor="let pos of positions" [value]="pos">{{ pos }}</option>
+    </select>
+  </div>
+</div>
 
 
-<ul>
-  <li>{{item}}</li>
-  <li>{{item}}</li>
-  <li>{{item}}</li>
-  <li>{{item}}</li>
-  <li>{{item}}</li>
-  <li>{{item}}</li>
-  <li>{{item}}</li>
-  <li>{{item}}</li>
-</ul>
+<div class="container-fluid">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col mb-4" *ngFor="let playerInactive of filteredInactiveRequest">
+      <mat-card class="card h-100">
+        <mat-card-header>
+          <mat-card-title>{{ playerInactive.player_name }}</mat-card-title>
+          <mat-card-subtitle>{{ playerInactive.position }}</mat-card-subtitle>
+        </mat-card-header>
+        <div class="card-content">
+          <div class="card-content-row">
+            <div class="card-content-column">
+              <p><strong>Height:</strong> {{ playerInactive.height }}</p>
+              <p><strong>Weight:</strong> {{ playerInactive.weight }}</p>
+              <p><strong>Country:</strong> {{ playerInactive.country }}</p>
+              <p><strong>School Name:</strong> {{ playerInactive.school_name }}</p>
+              <p><strong>School Type:</strong> {{ playerInactive.school_type }}</p>
+            </div>
+            <div class="card-content-column">
+              <p><strong>Jersey Number:</strong> {{ playerInactive.jersey_number }}</p>
+              <p><strong>Teams:</strong> {{ playerInactive.teams }}</p>
+              <p><strong>Status:</strong> {{ playerInactive.status }}</p>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
