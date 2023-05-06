@@ -11,6 +11,8 @@ import { InactiveplayerComponent } from './inactiveplayer/inactiveplayer.compone
 import { ActiveplayerComponent } from './activeplayer/activeplayer.component';
 import { NewrequestComponent } from './newrequest/newrequest.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
