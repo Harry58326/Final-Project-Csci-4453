@@ -19,6 +19,7 @@ export class ActiveplayerComponent implements OnInit {
   public searchPosition: string = '';
   public schoolTypes: string[] = ['High School', 'University', 'Community College', 'Foreign School'];
   public positions: string[] = ['PG', 'SG', 'SF', 'PF', 'C'];
+  defaultImageUrl:string = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/LeBron_James_%2851959977144%29_%28cropped2%29.jpg/800px-LeBron_James_%2851959977144%29_%28cropped2%29.jpg'
 
   constructor(private http: HttpClient) { }
 
