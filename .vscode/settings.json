@@ -8,19 +8,6 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "name": "localinstance3306",
-            "database": "NBA_Players",
-            "username": "Harry",
-            "password": "20001019"
-        },
-        {
-            "mysqlOptions": {
-                "authProtocol": "default"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
             "name": "local",
             "database": "Final_Project",
             "username": "Harry",

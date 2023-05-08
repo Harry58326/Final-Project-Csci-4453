@@ -60,7 +60,7 @@ h1 {
 .school-list li:last-child {
   border-bottom: none;
 }
-/* activeplayer.component.css */
+
 .container {
   margin-top: 20px;
 }
@@ -114,7 +114,6 @@ h1 {
   margin: 0;
 }
 
-/* Add this to activeplayer.component.css */
 
 .search-container {
   display: flex;
