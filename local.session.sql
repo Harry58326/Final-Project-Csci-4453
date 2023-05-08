@@ -1,1 +1,2 @@
-SELECT * FROM NBA_Players
+SELECT * FROM careers
+
