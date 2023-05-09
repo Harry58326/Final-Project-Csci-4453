@@ -13,7 +13,9 @@ Overall, this platform will provide an efficient way for users to manage and ana
 
 Tools will be used for this project:
 Front-end: Angular
+
 Server: Node.js
+
 Database: mysql
 
 
