@@ -11,7 +11,12 @@ We decided to implement a project using existing technology. Our project aims to
 4. The database will consist of a table of NBA players basic info: "NBA_Players". The "NBA_Players" table will contain basic information about each player, such as full name, team, position, country, jersey number, height, weight, etc.
 Overall, this platform will provide an efficient way for users to manage and analyze NBA player data. We believe that this project will be valuable to NBA fans, journalists, statisticians, and researchers.
 
+Tools will be used for this project:
+Front-end: Angular
 
+Server: Node.js
+
+Database: mysql
 
 
 
