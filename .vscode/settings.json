@@ -25,6 +25,19 @@
             "database": "project",
             "username": "CPeng",
             "password": "lyupengyang"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "^v^",
+            "database": "Final_Project",
+            "username": "CPeng6",
+            "password": "Dp010212"
         }
     ],
     "cSpell.words": [
